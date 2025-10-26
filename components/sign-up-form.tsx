@@ -29,7 +29,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { FieldDescription } from "@/components/ui/field";
-import { LOGIN_URL } from "@/constants/Routes";
+import { DASHBOARD_URL, LOGIN_URL } from "@/constants/Routes";
 import LoadingIcon from "@/assets/icon/LoadingIcon";
 
 
@@ -84,7 +84,7 @@ export function SignUpForm({
       if (error) throw error;
 
       toast.success("Account created successfully! Please verify your email.");
-      router.push("/auth/sign-up-success");
+      router.push(DASHBOARD_URL);
     } catch (error: unknown) {
       toast.error(
         error instanceof Error ? error.message : "An unexpected error occurred"
