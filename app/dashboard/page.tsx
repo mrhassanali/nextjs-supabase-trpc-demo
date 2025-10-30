@@ -1,7 +1,11 @@
-import React from "react";
+import ChatForm from "@/components/chat-form";
 
 const Page = () => {
-  return <div>Dashboard</div>;
+  return (
+    <>
+      <ChatForm />
+    </>
+  );
 };
 
 export default Page;
